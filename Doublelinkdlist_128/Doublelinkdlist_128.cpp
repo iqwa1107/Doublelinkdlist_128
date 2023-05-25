@@ -219,3 +219,8 @@ int main() {
 				break;
 			}
 		}
+		catch (exception& e) {
+			cout << "check for the values entered." << endl;
+		}
+	}
+}
