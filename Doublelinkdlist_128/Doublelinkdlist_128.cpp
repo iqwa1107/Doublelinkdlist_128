@@ -20,6 +20,7 @@ public:
 	void addNode();
 	bool search(int rollNo, node** preivious, node** curreent);
 	bool listEmpty();
+	bool deleteNode(int rollNo);
 	void traverse();
 	void revtraverse();
 	void hapus();
@@ -91,7 +92,23 @@ bool DoubleLinkedList :: search(int rollNo, node** preivious, node** curreent){
 	return(*curreent != NULL);
 }
 
-bool DoubleLinkedList:: deletenode(int roolNo) {
-	node** preivious,curreent 
+bool DoubleLinkedList::deleteNode(int rollNo) {
+	node* previous, * current;
+	previous = current = NULL;
+	if (search (rollNo, &previous, &current) == false)
+		return false;
+	if (current->next != NULL)
+		current->next->prev = previous; // step 2
+	if (previous != NULL)
+		previous->next = previous; // step 3
+	else
+		START = current->next;
 
+	delete current; // step 4
+	return true;
+}
+
+bool DoubleLinkedList::listEmpty(){
+	return (START == NULL);
+	}
  
