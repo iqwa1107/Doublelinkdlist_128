@@ -26,3 +26,23 @@ public:
 	void searchData();
 };
 
+DoubleLinkedList::DoubleLinkedList() {
+	START = NULL;
+}
+
+void DoubleLinkedList::addNode() {
+	int nim;
+	string nm;
+	cout << "\nEnter the roll number of the student: ";
+	cin >> nim;
+	cout << "\nEnter the roll name of the student: ";
+	cin >> nm;
+	node* newnode = new node(); //step 1
+	newnode->noMhs = nim; //step 2
+	newnode->name = nm; // step 2
+
+	/*insert a node in yhe beginning of a doubly - linked list*/
+
+	
+
+}
