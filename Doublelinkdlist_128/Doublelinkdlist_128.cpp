@@ -138,11 +138,11 @@ void DoubleLinkedList::revtraverse() {
 		cout << "\nRecords in descending order of roll number are:" << endl;
 		node* currentnode = START;
 		while (currentnode->next != NULL)
-			currentnode = currentNode->next;
+			currentnode = currentnode->next;
 
 		while (currentnode != NULL) {
-			cout << currentnode->noMhs << " " << currentNode->name << endl;
-			currentNode = currentNode->prev;
+			cout << currentnode->noMhs << " " << currentnode->name << endl;
+			currentnode = currentnode->prev;
 		}
 	}
 }
