@@ -180,3 +180,11 @@ void DoubleLinkedList::searchData() {
 		cout << "\nName: " << curr->name << endl;
 	}
 }
+
+int main() {
+	DoubleLinkedList obj;
+	while (true) {
+		try {
+			cout << "\nMenu" << endl;
+			cout << "1. add a record to the list" << endl;
+			cout << "2. delete a record from the list" << endl;
