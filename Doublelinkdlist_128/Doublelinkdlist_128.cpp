@@ -80,4 +80,18 @@ void DoubleLinkedList::addNode() {
 
 }
 
+bool DoubleLinkedList :: search(int rollNo, node** preivious, node** curreent){
+	*preivious = START; //srep 1.a
+	*curreent = START; // step 1.2
+	while (curreent != NULL && rollNo != (*curreent)->noMhs)
+	{
+		*preivious = *curreent; //step 1/d
+		*curreent = (*curreent); //step 1/e
+	}
+	return(*curreent != NULL);
+}
 
+bool DoubleLinkedList:: deletenode(int roolNo) {
+	node** preivious,curreent 
+
+ 
